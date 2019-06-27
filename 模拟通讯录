@@ -1,0 +1,49 @@
+#ifndef _CONTACT_H_
+#define _CONTACT_H_
+#define _CRT_SECURE_NO_WARNINGS 1
+#include<assert.h>
+#include<stdio.h>
+#include<string.h>
+
+enum Option//枚举
+{
+	EXIT,//0
+	ADD,//1
+	SEAR,//2
+	DEL,//3
+	SHOW,//4
+	CLEAR,//5
+	SORT//6
+};
+//定义常量
+#define MAX_NAME 20
+#define MAX_TEL 11
+#define MAX_ADDR 20
+#define MAX_SEX 20
+#define MAX_NUMPERSON 1002
+//定义结构体
+typedef struct PersonInfo
+{
+	char name[MAX_NAME];
+	short age;
+	char tele[MAX_TEL];
+	char addr[MAX_ADDR];
+	char sex[MAX_SEX];
+}PersonInfo;
+
+//通讯录
+typedef struct Contact
+{
+	PersonInfo per[MAX_NUMPERSON];
+	int usedSize;//被使用的个数
+}Contact;
+
+//函数声明
+void InitContact(Contact *pCon);
+void AddContact(Contact *pCon);
+int SearchContact(Contact *pCon);//找到返回下标，找不到返回-1
+void DelContact(Contact *pCon);
+void ShowContact(Contact *pCon);
+void ClearContact(Contact *pCon);
+void SortContact(Contact *pCon);
+#endif
