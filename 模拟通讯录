@@ -169,3 +169,52 @@ void SortContact(Contact *pCon)
 	}
 }
 
+
+//test.c
+#include "Contact.h"
+void menu()
+{
+	printf("**** 1.add   ***** 2.search ******\n");
+	printf("**** 3.del   ***** 4.show   ******\n");
+	printf("**** 5.clear ***** 6.sort   ******\n");
+	printf("**** 0.exit  *********************\n");
+}
+void start()
+{
+	int input = 0;
+	Contact con;
+	//初始化通讯录数组
+	InitContact(&con);
+	do{
+		menu();
+		printf("请输入你的操作：");
+		scanf("%d", &input);
+		switch (input)
+		{
+		case ADD:
+			AddContact(&con);
+			break;
+		case SEAR:
+			SearchContact(&con);
+			break;
+		case DEL:
+			DelContact(&con);
+			break;
+		case SHOW:
+			ShowContact(&con);
+			break;
+		case CLEAR:
+			ClearContact(&con);
+			break;
+		case SORT:
+			SortContact(&con);
+			break;
+		}
+	} while (input);
+}
+//主函数
+int main()
+{
+	start();
+	return 0;
+}
