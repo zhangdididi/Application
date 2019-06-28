@@ -211,6 +211,9 @@ void start()
 		case SORT:
 			SortContact(&con);
 			break;
+                case MODITY:
+			ModityContact(&con);
+			break;
 		}
 	} while (input);
 }
