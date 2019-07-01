@@ -49,6 +49,7 @@ void ShowContact(Contact *pCon);
 void ClearContact(Contact *pCon);
 void SortContact(Contact *pCon);
 void ModityContact(Contact *pCon);
+void DestroyContact(Contact *pCon);
 #endif
 
 
