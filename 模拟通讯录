@@ -15,7 +15,7 @@ enum Option//枚举
 	SHOW,//4
 	CLEAR,//5
 	SORT,//6
-	MODITY//7
+	DESTROY//7
 };
 //定义常量
 #define MAX_NAME 20
