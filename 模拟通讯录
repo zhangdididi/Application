@@ -97,7 +97,7 @@ int SearchContact(Contact *pCon)
 		return -1;
 	}
 	printf("请输入姓名：");
-	scanf("%s", name);
+	scanf("%s", name);//输入姓名
 	for (int i = 0; i < pCon->usedSize; i++)
 	{
 		if (strcmp(pCon->per[i].name, name) == 0)
