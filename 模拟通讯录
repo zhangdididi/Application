@@ -6,7 +6,7 @@
 #include<stdio.h>
 #include<string.h>
 
-enum Option//枚举
+enum Option//枚举常量
 {
 	EXIT,//0
 	ADD,//1
