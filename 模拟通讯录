@@ -142,7 +142,7 @@ void ShowContact(Contact *pCon)
 //清空通讯录函数
 void ClearContact(Contact *pCon)
 {
-	pCon->usedSize = 0;
+	pCon->usedSize = 0;//将通讯录数量置0
 	printf("通讯录已清空\n");
 }
 
