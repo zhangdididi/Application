@@ -1,7 +1,6 @@
 //头文件Contact.h
 #ifndef _CONTACT_H_
 #define _CONTACT_H_
-#define _CRT_SECURE_NO_WARNINGS 1
 #include<assert.h>
 #include<stdio.h>
 #include<string.h>
